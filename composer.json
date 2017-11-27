@@ -1,8 +1,30 @@
 {
-    "name": "factfinder-web-components/magento2-module",
-    "description": "Integration of Web Components into Magento2",
+    "name": "Omikron/Factfinder",
+    "description": "FACTFinder Webcomponents SDK",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/magento-composer-installer": "*"
+    },
+    "suggest": {
+    },
     "type": "magento2-module",
-    "license": "OSL",
-    "minimum-stability": "stable",
-    "require": {}
+    "version": "0.1.0",
+    "license": [
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Omikron\\Factfinder\\": ""
+        }
+    },
+    "extra": {
+        "map": [
+            [
+                "*",
+                "Omikron/Factfinder"
+            ]
+        ]
+    }
 }
