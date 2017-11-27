@@ -1,0 +1,8 @@
+{
+    "name": "factfinder-web-components/magento2-module",
+    "description": "Integration of Web Components into Magento2",
+    "type": "magento2-module",
+    "license": "OSL",
+    "minimum-stability": "stable",
+    "require": {}
+}
