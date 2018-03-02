@@ -28,8 +28,7 @@ class Router implements \Magento\Framework\App\RouterInterface
     public function __construct(
         \Magento\Framework\App\ActionFactory $actionFactory,
         \Magento\Framework\App\ResponseInterface $response
-    )
-    {
+    ) {
         $this->actionFactory = $actionFactory;
         $this->_response = $response;
     }
@@ -38,10 +37,15 @@ class Router implements \Magento\Framework\App\RouterInterface
      * Test the incoming requests for matches to the factfinder url pattern
      *
      * @param \Magento\Framework\App\RequestInterface $request
+     *
      * @return bool|ActionInterface
      */
     public function match(\Magento\Framework\App\RequestInterface $request)
     {
+        if ($request->getModuleName() === 'factfinder') {
+            return false;
+        }
+
         // check if URL matches FACT-Finder front name defined in Data helper
         $pathRegex = "/^(\/" . Data::FRONT_NAME . "\/)/";
         if (!preg_match($pathRegex, $request->getPathInfo())) {
