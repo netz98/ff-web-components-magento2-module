@@ -6,7 +6,7 @@
                 <item name="omikroncustomrouter" xsi:type="array">
                     <item name="class" xsi:type="string">Omikron\Factfinder\Controller\Router</item>
                     <item name="disable" xsi:type="boolean">false</item>
-                    <item name="sortOrder" xsi:type="string">22</item>
+                    <item name="sortOrder" xsi:type="string">32</item>
                 </item>
             </argument>
         </arguments>
